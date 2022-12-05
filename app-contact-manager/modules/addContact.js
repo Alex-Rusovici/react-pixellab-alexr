@@ -1,7 +1,6 @@
 export const render = () => {
   const container = document.createElement('form');
-
-  const jsx = <></>;
+  container.classList.add('add-contact');
 
   container.innerHTML = `
   <h4>Add new contact</h4>
@@ -37,8 +36,7 @@ export const render = () => {
     <button type="submit" title="Save" class="btn btn-secondary me-1">
       Save
     </button>
-
-    <button type="submit" title="Cancel" class="btn btn-secondary me-1">
+    <button type="button" title="Cancel" class="btn btn-secondary me-1 cancel-button">
       Cancel
     </button>
   </div>
