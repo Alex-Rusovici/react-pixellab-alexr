@@ -1,13 +1,14 @@
 export const render = (pet) => {
-  const { name, species, age } = pet;
+  const { name, species, age, id } = pet;
   const container = document.createElement('article');
   container.classList.add('pet', 'mt-3');
+  container.dataset.petId = id;
 
   container.innerHTML = `
     <h1>${name}</h1>
     <ul>
-      <li>Species: ${species}</li>
       <li>Age: ${age}</li>
+      <li>Species: ${species}</li>
     </ul>
 
     <button title="Delete"
@@ -17,7 +18,7 @@ export const render = (pet) => {
 
     <button title="Edit"
       type="button"
-      class="btn btn-secondary mx-2"
+      class="btn btn-secondary"
     >Edit</button>
   `;
 
